@@ -87,10 +87,10 @@ class ViewController: UIViewController, UITableViewDataSource{
         
         //2
         let entity = NSEntityDescription.entityForName("Person", inManagedObjectContext:managedContext)
-        let person = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        let person = Person(entity: entity!, insertIntoManagedObjectContext: managedContext)
         
         //3
-        person.setValue(name, forKey: "name")
+        person.name = name
         
         //4
         do {
@@ -112,10 +112,9 @@ class ViewController: UIViewController, UITableViewDataSource{
         indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
         
-        let person = people[indexPath.row]
+        let person = people[indexPath.row] as? Person
         
-        cell!.textLabel!.text = person.valueForKey("name") as? String
-        
+        cell!.textLabel!.text = person!.name
         return cell!
     }
 }
