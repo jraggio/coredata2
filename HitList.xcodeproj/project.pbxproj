@@ -15,6 +15,8 @@
 		963750C11CCEC41000B35263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963750BF1CCEC41000B35263 /* LaunchScreen.storyboard */; };
 		963750CC1CCEC41000B35263 /* HitListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963750CB1CCEC41000B35263 /* HitListTests.swift */; };
 		963750D71CCEC41000B35263 /* HitListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963750D61CCEC41000B35263 /* HitListUITests.swift */; };
+		963750E61CCED3D200B35263 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963750E41CCED3D200B35263 /* Person+CoreDataProperties.swift */; };
+		963750E71CCED3D200B35263 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963750E51CCED3D200B35263 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		963750D21CCEC41000B35263 /* HitListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HitListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		963750D61CCEC41000B35263 /* HitListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitListUITests.swift; sourceTree = "<group>"; };
 		963750D81CCEC41000B35263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		963750E41CCED3D200B35263 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		963750E51CCED3D200B35263 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		963750A71CCEC41000B35263 = {
 			isa = PBXGroup;
 			children = (
+				963750E41CCED3D200B35263 /* Person+CoreDataProperties.swift */,
+				963750E51CCED3D200B35263 /* Person.swift */,
 				963750B21CCEC41000B35263 /* HitList */,
 				963750CA1CCEC41000B35263 /* HitListTests */,
 				963750D51CCEC41000B35263 /* HitListUITests */,
@@ -262,6 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963750E71CCED3D200B35263 /* Person.swift in Sources */,
+				963750E61CCED3D200B35263 /* Person+CoreDataProperties.swift in Sources */,
 				963750BC1CCEC41000B35263 /* HitList.xcdatamodeld in Sources */,
 				963750B61CCEC41000B35263 /* ViewController.swift in Sources */,
 				963750B41CCEC41000B35263 /* AppDelegate.swift in Sources */,
