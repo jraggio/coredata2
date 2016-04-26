@@ -2,14 +2,14 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
     <entity name="Person" representedClassName=".Person" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="owns" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Pet" inverseName="ownedBy" inverseEntity="Pet" syncable="YES"/>
+        <relationship name="owns" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Pet" inverseName="ownedBy" inverseEntity="Pet" syncable="YES"/>
     </entity>
     <entity name="Pet" representedClassName=".Pet" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="ownedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="owns" inverseEntity="Person" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Person" positionX="-317" positionY="18" width="128" height="75"/>
+        <element name="Person" positionX="-317" positionY="18" width="128" height="73"/>
         <element name="Pet" positionX="-36" positionY="18" width="128" height="73"/>
     </elements>
 </model>

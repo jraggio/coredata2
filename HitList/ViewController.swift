@@ -9,13 +9,14 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource{
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var tableView: UITableView!
     
     var people = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
         
         title = "People"
         
@@ -112,6 +113,39 @@ class ViewController: UIViewController, UITableViewDataSource{
         
         cell.textLabel!.text = person!.name
         return cell
+    }
+    
+    // Override to support conditional editing of the table view.
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    
+    
+    // Override to support editing the table view.
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let managedContext = appDelegate.managedObjectContext
+            
+            let personToRemove = people[indexPath.row] as! Person
+            people.removeAtIndex(indexPath.row)
+            
+            managedContext.deleteObject(personToRemove)
+            
+            do {
+                try managedContext.save()
+            } catch let error as NSError  {
+                print("Could not delete \(error), \(error.userInfo)")
+            }
+            
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
     }
     
     // MARK: - Navigation
