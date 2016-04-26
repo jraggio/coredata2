@@ -17,10 +17,8 @@ class ViewController: UIViewController, UITableViewDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "\"The List\""
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        title = "People"
         
- 
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -107,15 +105,25 @@ class ViewController: UIViewController, UITableViewDataSource{
         return people.count
     }
     
-    func tableView(tableView: UITableView,
-                   cellForRowAtIndexPath
-        indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("PersonCell", forIndexPath: indexPath)
         
         let person = people[indexPath.row] as? Person
         
-        cell!.textLabel!.text = person!.name
-        return cell!
+        cell.textLabel!.text = person!.name
+        return cell
     }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowPets" {
+            if let dvc = segue.destinationViewController as? PetTableViewController {
+                let selectedIndex = self.tableView.indexPathForSelectedRow?.row
+                dvc.person = people[selectedIndex!] as? Person
+            }
+        }
+    }
+    
 }
 

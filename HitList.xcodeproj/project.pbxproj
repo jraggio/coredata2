@@ -17,6 +17,9 @@
 		963750D71CCEC41000B35263 /* HitListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963750D61CCEC41000B35263 /* HitListUITests.swift */; };
 		963750E61CCED3D200B35263 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963750E41CCED3D200B35263 /* Person+CoreDataProperties.swift */; };
 		963750E71CCED3D200B35263 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963750E51CCED3D200B35263 /* Person.swift */; };
+		963750EA1CCEDF0200B35263 /* Pet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963750E81CCEDF0200B35263 /* Pet+CoreDataProperties.swift */; };
+		963750EB1CCEDF0200B35263 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963750E91CCEDF0200B35263 /* Pet.swift */; };
+		963750ED1CCEF05000B35263 /* PetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963750EC1CCEF05000B35263 /* PetTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		963750D81CCEC41000B35263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		963750E41CCED3D200B35263 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		963750E51CCED3D200B35263 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		963750E81CCEDF0200B35263 /* Pet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		963750E91CCEDF0200B35263 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		963750EC1CCEF05000B35263 /* PetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,8 @@
 		963750A71CCEC41000B35263 = {
 			isa = PBXGroup;
 			children = (
+				963750E81CCEDF0200B35263 /* Pet+CoreDataProperties.swift */,
+				963750E91CCEDF0200B35263 /* Pet.swift */,
 				963750E41CCED3D200B35263 /* Person+CoreDataProperties.swift */,
 				963750E51CCED3D200B35263 /* Person.swift */,
 				963750B21CCEC41000B35263 /* HitList */,
@@ -108,6 +116,7 @@
 				963750B31CCEC41000B35263 /* AppDelegate.swift */,
 				963750B51CCEC41000B35263 /* ViewController.swift */,
 				963750B71CCEC41000B35263 /* Main.storyboard */,
+				963750EC1CCEF05000B35263 /* PetTableViewController.swift */,
 				963750BD1CCEC41000B35263 /* Assets.xcassets */,
 				963750BF1CCEC41000B35263 /* LaunchScreen.storyboard */,
 				963750C21CCEC41000B35263 /* Info.plist */,
@@ -268,11 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963750EB1CCEDF0200B35263 /* Pet.swift in Sources */,
 				963750E71CCED3D200B35263 /* Person.swift in Sources */,
 				963750E61CCED3D200B35263 /* Person+CoreDataProperties.swift in Sources */,
 				963750BC1CCEC41000B35263 /* HitList.xcdatamodeld in Sources */,
 				963750B61CCEC41000B35263 /* ViewController.swift in Sources */,
 				963750B41CCEC41000B35263 /* AppDelegate.swift in Sources */,
+				963750EA1CCEDF0200B35263 /* Pet+CoreDataProperties.swift in Sources */,
+				963750ED1CCEF05000B35263 /* PetTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

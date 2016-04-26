@@ -1,5 +1,5 @@
 //
-//  Person+CoreDataProperties.swift
+//  Pet+CoreDataProperties.swift
 //  HitList
 //
 //  Created by Raggios on 4/25/16.
@@ -12,9 +12,9 @@
 import Foundation
 import CoreData
 
-extension Person {
+extension Pet {
 
     @NSManaged var name: String?
-    @NSManaged var owns: NSOrderedSet?
+    @NSManaged var ownedBy: Person?
 
 }
